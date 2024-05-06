@@ -23,17 +23,17 @@ public class Desenvolvedor extends Funcionario{
     @Override
     public String toString() {
         System.out.println("\n--DESENVOLVEDOR--");
-        return super.toString() + "\nLinguagens: " + linguagens + "\n----------";
+        return super.toString() + "\nLinguagens: " + linguagens;
     }
 
     @Override
     public String trabalhar() {
-        return "\nO Desenvolvedor" + getNome()+ " esta estudando JAVA";
+        return "\nO Desenvolvedor " + getNome()+ " esta estudando " + linguagens;
     }
 
     @Override
     public String relatarProgresso() {
-        return "\nO Desenvolvedor" + getNome() + " esta desenvolvendo muitos projetos..";
+        return "\nO Desenvolvedor " + getNome() + " esta desenvolvendo muitos projetos.." + "\n----------";
     }
 
 

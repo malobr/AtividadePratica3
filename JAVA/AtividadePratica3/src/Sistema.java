@@ -131,18 +131,28 @@ public class Sistema {
 
 
     private static void exibirFuncionario() {
-        System.out.println("Informe a matricula do funcionario:");
+        System.out.println("Informe a matrícula do funcionário:");
         String matricula = scanner.nextLine();
+        
         for (Funcionario funcionario : Cadastro.getListaFuncionarios()) {
             if (funcionario.getMatricula().equals(matricula)) {
-                System.out.println("Funcionario encontrado:");
+                System.out.println("Funcionário encontrado:");
                 System.out.println(funcionario.toString());
+    
+                //imprime os metodos da interface Trabalhavel...
+                if (funcionario instanceof Trabalhavel) {
+                    Trabalhavel trabalhavel = (Trabalhavel) funcionario;
+                    System.out.println("\nTrabalhando: " + trabalhavel.trabalhar());
+                    System.out.println("Progresso: " + trabalhavel.relatarProgresso());
+                } 
                 enterParaSeguir();
                 return;
             }
         }
-        System.out.println("Cliente não encontrado.");
+        
+        System.out.println("Funcionário não encontrado.");
     }
+    
     
     
     public static void enterParaSeguir() {

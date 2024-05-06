@@ -31,7 +31,7 @@ public class Estagiario extends Funcionario{
     @Override
     public String toString() {
         System.out.println("\n--ESTAGIARIO--");
-        return super.toString() + "\nHoras de Trabalho: " + horasDeTrabalho + "\nSupervisor: " + supervisor + "\n----------";
+        return super.toString() + "\nHoras de Trabalho: " + horasDeTrabalho + "\nSupervisor: " + supervisor;
     }
 
 
@@ -42,7 +42,7 @@ public class Estagiario extends Funcionario{
 
     @Override
     public String relatarProgresso() {
-        return "\nO estagiario" + getNome() + " esta indo bem no trabalho..";
+        return "\nO estagiario " + getNome() + " esta indo bem no trabalho, sob a supervisao do " + supervisor + "\n----------";
     }
 
 

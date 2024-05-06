@@ -31,17 +31,17 @@ public class Gerente extends Funcionario{
     @Override
     public String toString() {
         System.out.println("\n--GERENTE--");
-        return super.toString() + "\nEquipe sob Gerencia: " + equipeSobGerencia + "\nBonus Anual: " + bonus + "\n----------";
+        return super.toString() + "\nEquipe sob Gerencia: " + equipeSobGerencia + "\nBonus Anual: " + bonus;
     }
 
     @Override
     public String trabalhar() {
         
-        return "\nO Gerente" + getNome() + " esta trabalhando em um projeto";
+        return "\nO Gerente " + getNome() + " esta trabalhando em um projeto";
     }
 
     @Override
     public String relatarProgresso() {
-        return "\nO Gerente" + getNome() + " este gerenciando uma equipe muito bem...";
+        return "\nO Gerente " + getNome() + " este gerenciando a equipe " + equipeSobGerencia + " muito bem..." + "\n----------";
     }
 }
