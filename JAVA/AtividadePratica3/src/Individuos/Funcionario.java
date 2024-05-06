@@ -31,7 +31,7 @@ public abstract class Funcionario implements Trabalhavel{
     
     @Override
     public String toString() {
-        return "\nNome: " + nome + "\nMatricula: " + matricula;
+        return "Nome: " + nome + "\nMatricula: " + matricula;
     }
     
 

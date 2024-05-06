@@ -30,7 +30,8 @@ public class Estagiario extends Funcionario{
     }
     @Override
     public String toString() {
-        return super.toString() + "\nHoras de Trabalho: " + horasDeTrabalho;
+        System.out.println("\n--ESTAGIARIO--");
+        return super.toString() + "\nHoras de Trabalho: " + horasDeTrabalho + "\nSupervisor: " + supervisor + "\n----------";
     }
 
 

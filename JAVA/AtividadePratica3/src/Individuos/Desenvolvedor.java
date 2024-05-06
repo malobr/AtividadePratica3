@@ -2,14 +2,12 @@ package Individuos;
 
 public class Desenvolvedor extends Funcionario{
     private String linguagens;
-    private Gerente gerente;
 
     public Desenvolvedor() {}
 
-    public Desenvolvedor(String nome, String matricula, String linguagens, Gerente gerente) {
+    public Desenvolvedor(String nome, String matricula, String linguagens) {
         super(nome, matricula);
         this.linguagens = linguagens;
-        this.gerente = gerente;
     }
 
 
@@ -21,19 +19,11 @@ public class Desenvolvedor extends Funcionario{
     }
 
 
-    public Gerente getGerente() {
-        return gerente;
-    }
-
-    public void setGerente(Gerente gerente) {
-        this.gerente = gerente;
-    }
-
-
     
     @Override
     public String toString() {
-        return super.toString() + "\nLinguagens: " + linguagens;
+        System.out.println("\n--DESENVOLVEDOR--");
+        return super.toString() + "\nLinguagens: " + linguagens + "\n----------";
     }
 
     @Override
@@ -42,13 +32,9 @@ public class Desenvolvedor extends Funcionario{
     }
 
     @Override
-public String relatarProgresso() {
-    if (getGerente() != null) {
-        return "\nO Desenvolvedor " + getNome() + " está sendo gerenciado por " + getGerente().getNome();
-    } else {
-        return "\nO Desenvolvedor " + getNome() + " não tem gerente associado.";
+    public String relatarProgresso() {
+        return "\nO Desenvolvedor" + getNome() + " esta desenvolvendo muitos projetos..";
     }
-}
 
 
 }

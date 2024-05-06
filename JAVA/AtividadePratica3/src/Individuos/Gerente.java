@@ -30,7 +30,8 @@ public class Gerente extends Funcionario{
 
     @Override
     public String toString() {
-        return super.toString() + "\nEquipe sob Gerencia: " + equipeSobGerencia + "\nBonus Anual: " + bonus;
+        System.out.println("\n--GERENTE--");
+        return super.toString() + "\nEquipe sob Gerencia: " + equipeSobGerencia + "\nBonus Anual: " + bonus + "\n----------";
     }
 
     @Override
