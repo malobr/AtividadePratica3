@@ -1,26 +1,48 @@
 package Individuos;
 
 public class Estagiario extends Funcionario{
-    private Float tempoDeEstagio;
+    private Float horasDeTrabalho;
+    private String supervisor;
 
     public Estagiario(){}
 
-    public Estagiario(String nome, String matricula, Float tempoDeEstagio) {
+    public Estagiario(String nome, String matricula, Float horasDeTrabalho, String supervisor) {
         super(nome, matricula);
-        this.tempoDeEstagio = tempoDeEstagio;
+        this.horasDeTrabalho = horasDeTrabalho;
+        this.supervisor = supervisor;
     }
 
 
-    public Float getTempoDeEstagio() {
-        return tempoDeEstagio;
+    public Float getHorasDeTrabalho() {
+        return horasDeTrabalho;
     }
-    public void setTempoDeEstagio(Float tempoDeEstagio) {
-        this.tempoDeEstagio = tempoDeEstagio;
+    public void setHorasDeTrabalho(Float horasDeTrabalho) {
+        this.horasDeTrabalho = horasDeTrabalho;
     }
     
 
+    public String getSupervisor() {
+        return supervisor;
+    }
+
+    public void setSupervisor(String supervisor) {
+        this.supervisor = supervisor;
+    }
     @Override
     public String toString() {
-        return super.toString() + "\nTempo de Estagio: " + tempoDeEstagio;
+        return super.toString() + "\nHoras de Trabalho: " + horasDeTrabalho;
     }
+
+
+    @Override
+    public String trabalhar() {
+        return "\nO estagiario " + getNome() + " esta aprendendo a trabalhar!";
+    }
+
+    @Override
+    public String relatarProgresso() {
+        return "\nO estagiario" + getNome() + " esta indo bem no trabalho..";
+    }
+
+
 }
