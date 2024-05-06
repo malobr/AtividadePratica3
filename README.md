@@ -8,7 +8,7 @@ Este é um sistema de gerenciamento de funcionários desenvolvido em Java, com b
 - **Cadastro de Funcionários:** Permite cadastrar novos funcionários com nome, matrícula e outras informações específicas de cada tipo de funcionário (gerentes, desenvolvedores e estagiários).
 - **Procurar Funcionário:** Busca um funcionário cadastrado pelo nome ou matrícula.
 - **Listar Todos os Funcionários Cadastrados:** Lista todos os funcionários cadastrados no sistema.
-- **Excluir Funcionário:** Exclui um funcionário cadastrado pelo nome ou matrícula.
+- **Excluir Funcionário:** Exclui um funcionário cadastrado pela matrícula.
 
 ## Como Utilizar o Sistema
 
