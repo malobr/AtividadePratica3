@@ -16,6 +16,8 @@ public class Sistema {
 
     private static void exibirMenu() {
         
+        menu();
+
         System.out.println("\n");
         System.out.println("[1] Cadastrar Funcionario");
         System.out.println("[2] Remover Funcionario");
@@ -44,6 +46,7 @@ public class Sistema {
         }
     }
 
+    /*--------------CASE 1------------- */
     private static void cadastrarNovoFuncionario() {
         System.out.println("Qual tipo de funcionário deseja cadastrar?");
         System.out.println("[1] Gerente");
@@ -113,7 +116,7 @@ public class Sistema {
     }
     
 
-    
+        /*--------------CASE 2------------- */
     private static void removerFuncionario(){
         System.out.println("Informe a Matricula do funcionario a ser excluído:");
         String matricula = scanner.nextLine();
@@ -129,7 +132,7 @@ public class Sistema {
     }
 
 
-
+    /*--------------CASE 3------------- */
     private static void exibirFuncionario() {
         System.out.println("Informe a matrícula do funcionário:");
         String matricula = scanner.nextLine();
@@ -160,6 +163,9 @@ public class Sistema {
         scanner.nextLine();
     }
     
+
+
+    /*-----DESENHOS-----*/
     private static void mensagemDeSaida(){
         System.out.println("\nO programa foi finalizado...");
         System.out.println("\n");
@@ -168,7 +174,42 @@ public class Sistema {
         System.out.println("█▀▀▀▀▀█▄           J      AAAAAAA      V   V       AAAAAAA      █▀▀▀▀▀█▄  ");
         System.out.println("█░░░░░█─█    J     J      A     A       V V        A     A      █░░░░░█─█ ");
         System.out.println("▀▄▄▄▄▄▀▀      JJJJJ       A     A        V         A     A      ▀▄▄▄▄▄▀▀  ");
-}
+        System.out.println("");
+        System.out.println("──────▄▀▄─────▄▀▄");
+        System.out.println("─────▄█░░▀▀▀▀▀░░█▄");
+        System.out.println("─▄▄──█░░░░░░░░░░░█──▄▄");
+        System.out.println("█▄▄█─█░░▀░░┬░░▀░░█─█▄▄█");
+        System.out.println("-------------------------");
+        
+        }
+
+
+
+private static void menu(){
+
+    System.out.println("░░░░░░░░░░░░░░░░░░░░░▄▀░░▌");
+    System.out.println("░░░░░░░░░░░░░░░░░░░▄▀▐░░░▌");
+    System.out.println("░░░░░░░░░░░░░░░░▄▀▀▒▐▒░░░▌");
+    System.out.println("░░░░░▄▀▀▄░░░▄▄▀▀▒▒▒▒▌▒▒░░▌");
+    System.out.println("░░░░▐▒░░░▀▄▀▒▒▒▒▒▒▒▒▒▒▒▒▒█");
+    System.out.println("░░░░▌▒░░░░▒▀▄▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄");
+    System.out.println("░░░░▐▒░░░░░▒▒▒▒▒▒▒▒▒▌▒▐▒▒▒▒▒▀▄");
+    System.out.println("░░░░▌▀▄░░▒▒▒▒▒▒▒▒▐▒▒▒▌▒▌▒▄▄▒▒▐");
+    System.out.println("░░░▌▌▒▒▀▒▒▒▒▒▒▒▒▒▒▐▒▒▒▒▒█▄█▌▒▒▌");
+    System.out.println("░▄▀▒▐▒▒▒▒▒▒▒▒▒▒▒▄▀█▌▒▒▒▒▒▀▀▒▒▐░░░▄");
+    System.out.println("▀▒▒▒▒▌▒▒▒▒▒▒▒▄▒▐███▌▄▒▒▒▒▒▒▒▄▀▀▀▀");
+    System.out.println("▒▒▒▒▒▐▒▒▒▒▒▄▀▒▒▒▀▀▀▒▒▒▒▄█▀░░▒▌▀▀▄▄");
+    System.out.println("▒▒▒▒▒▒█▒▄▄▀▒▒▒▒▒▒▒▒▒▒▒░░▐▒▀▄▀▄░░░░▀");
+    System.out.println("▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▄▒▒▒▒▄▀▒▒▒▌░░▀▄");
+    System.out.println("▒▒▒▒▒▒▒▒▀▄▒▒▒▒▒▒▒▒▀▀▀▀▒▒▒▄▀");
+    System.out.println("--CADASTRO DE FUNCIONARIOS--");
+
+}    
+
+
+
+
+
 
 
 
