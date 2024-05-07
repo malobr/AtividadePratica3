@@ -5,8 +5,8 @@ public class Gerente extends Funcionario{
     private float bonus;
     public Gerente() {}
 
-    public Gerente(String nome, String matricula, String equipeSobGerencia, float bonus) {
-        super(nome, matricula);
+    public Gerente(String nome, String matricula, float salario, String equipeSobGerencia, float bonus) {
+        super(nome, matricula, salario);
         this.equipeSobGerencia = equipeSobGerencia;
         this.bonus = bonus;
     }
@@ -31,17 +31,22 @@ public class Gerente extends Funcionario{
     @Override
     public String toString() {
         System.out.println("\n--GERENTE--");
-        return super.toString() + "\nEquipe sob Gerencia: " + equipeSobGerencia + "\nBonus Anual: " + bonus;
+        return super.toString() + "\nEquipe sob Gerencia: " + equipeSobGerencia + "\nBonus Anual: " + bonus + ".";
     }
 
     @Override
     public String trabalhar() {
         
-        return "\nO Gerente " + getNome() + " esta trabalhando em um projeto";
+        return "\nO Gerente " + getNome() + " esta trabalhando em um projeto. ";
     }
 
     @Override
     public String relatarProgresso() {
         return "\nO Gerente " + getNome() + " este gerenciando a equipe " + equipeSobGerencia + " muito bem..." + "\n----------";
     }
+
+    @Override
+    public float calcularSalario() {
+        return getSalario() + getBonus();
+    }/*FORMA 1 */
 }

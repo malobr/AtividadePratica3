@@ -69,9 +69,13 @@ public class Sistema {
                 System.out.println("Informe o bônus do gerente:");
                 float bonusGerente = scanner.nextFloat();
                 scanner.nextLine(); // Limpa o buffer do scanner
+
+                System.out.println("Informe o salário do gerente:");
+                float salarioGerente = scanner.nextFloat();
+                scanner.nextLine(); // Limpa o buffer do scanner
                 
                 // Criando o objeto gerente
-                Gerente gerente = new Gerente(nomeGerente, matriculaGerente, equipeGerencia, bonusGerente);
+                Gerente gerente = new Gerente(nomeGerente, matriculaGerente, salarioGerente, equipeGerencia, bonusGerente);
                 Cadastro.cadastrar(gerente);
                 break;
             case 2:
@@ -83,9 +87,17 @@ public class Sistema {
     
                 System.out.println("Informe as linguagens do desenvolvedor:");
                 String linguagensDesenvolvedor = scanner.nextLine();
+
+                System.out.println("Informe o numero de projetos em andamento:");
+                int projetosDesenvolvedor = scanner.nextInt();
+                scanner.nextLine();
+
+                System.out.println("Informe o salário do desenvolvedor:");
+                float salarioDesenvolvedor = scanner.nextFloat();
+                scanner.nextLine(); // Limpa o buffer do scanner
                     
                 // Criando o objeto desenvolvedor
-                Desenvolvedor desenvolvedor = new Desenvolvedor(nomeDesenvolvedor, matriculaDesenvolvedor, linguagensDesenvolvedor);
+                Desenvolvedor desenvolvedor = new Desenvolvedor(nomeDesenvolvedor, matriculaDesenvolvedor, salarioDesenvolvedor, linguagensDesenvolvedor, projetosDesenvolvedor);
                 Cadastro.cadastrar(desenvolvedor);
                 break;
             case 3:
@@ -101,9 +113,14 @@ public class Sistema {
                 
                 System.out.println("Informe o nome do supervisor do estagiário:");
                 String nomeSupervisorEstagiario = scanner.nextLine();
+
+                System.out.println("Informe o salário do estagiário:");
+                float salarioEstagiario = scanner.nextFloat();
+                scanner.nextLine(); // Limpa o buffer do scanner
+    
                     
                 // Criando o objeto estagiário
-                Estagiario estagiario = new Estagiario(nomeEstagiario, matriculaEstagiario, horasTrabalhoEstagiario, nomeSupervisorEstagiario);
+                Estagiario estagiario = new Estagiario(nomeEstagiario, matriculaEstagiario, salarioEstagiario, horasTrabalhoEstagiario, nomeSupervisorEstagiario);
                 Cadastro.cadastrar(estagiario);
                 break;
             default:
@@ -145,8 +162,13 @@ public class Sistema {
                 //imprime os metodos da interface Trabalhavel...
                 if (funcionario instanceof Trabalhavel) {
                     Trabalhavel trabalhavel = (Trabalhavel) funcionario;
+
                     System.out.println("\nTrabalhando: " + trabalhavel.trabalhar());
                     System.out.println("Progresso: " + trabalhavel.relatarProgresso());
+
+                    //imprime o salario de cada funcionario respectivamente..
+                    float salario = funcionario.calcularSalario();
+                    System.out.println("Salário: " + salario);               
                 } 
                 enterParaSeguir();
                 return;

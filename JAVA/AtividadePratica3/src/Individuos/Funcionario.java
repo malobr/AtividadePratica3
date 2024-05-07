@@ -4,12 +4,14 @@ import Trabalhavel.Trabalhavel;
 public abstract class Funcionario implements Trabalhavel{
     private String nome;
     private String matricula;
+    private float salario;
     
     public Funcionario(){}
     
-    public Funcionario(String nome, String matricula) {
+    public Funcionario(String nome, String matricula, float salario) {
         this.nome = nome;
         this.matricula = matricula;
+        this.salario = salario;
     }
 
     public String getNome() {
@@ -27,13 +29,21 @@ public abstract class Funcionario implements Trabalhavel{
         this.matricula = matricula;
     }
 
+    public float getSalario(){
+        return salario;
+    }
+    public void setSalario(float salario){
+        this.salario = salario;
+    }
+
 
     
     @Override
     public String toString() {
-        return "Nome: " + nome + "\nMatricula: " + matricula;
+        return "Nome: " + nome + "\nMatricula: " + matricula /*+ "Salario: " + salario*/;
     }
     
+    public abstract float calcularSalario();
 
     
 }

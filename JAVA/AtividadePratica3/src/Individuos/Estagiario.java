@@ -6,8 +6,8 @@ public class Estagiario extends Funcionario{
 
     public Estagiario(){}
 
-    public Estagiario(String nome, String matricula, Float horasDeTrabalho, String supervisor) {
-        super(nome, matricula);
+    public Estagiario(String nome, String matricula, float salario, float horasDeTrabalho, String supervisor) {
+        super(nome, matricula, salario);
         this.horasDeTrabalho = horasDeTrabalho;
         this.supervisor = supervisor;
     }
@@ -42,8 +42,11 @@ public class Estagiario extends Funcionario{
 
     @Override
     public String relatarProgresso() {
-        return "\nO estagiario " + getNome() + " esta indo bem no trabalho, sob a supervisao do " + supervisor + "\n----------";
+        return "\nO estagiario " + getNome() + " esta indo bem no trabalho, sob a supervisao do " + supervisor + ".\n----------";
     }
 
-
+    @Override
+    public float calcularSalario() {
+        return getSalario() * horasDeTrabalho;
+    }//O salario do estagiaraio vai ser o valor que o usuario colocar * as horas trabalhadas...
 }
