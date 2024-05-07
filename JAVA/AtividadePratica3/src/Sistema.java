@@ -88,16 +88,16 @@ public class Sistema {
                 System.out.println("Informe as linguagens do desenvolvedor:");
                 String linguagensDesenvolvedor = scanner.nextLine();
 
-                System.out.println("Informe o numero de projetos em andamento:");
-                int projetosDesenvolvedor = scanner.nextInt();
-                scanner.nextLine();
+                //System.out.println("Informe o numero de projetos em andamento:");
+               // int projetosDesenvolvedor = scanner.nextInt();
+               // scanner.nextLine();
 
                 System.out.println("Informe o salário do desenvolvedor:");
                 float salarioDesenvolvedor = scanner.nextFloat();
                 scanner.nextLine(); // Limpa o buffer do scanner
                     
                 // Criando o objeto desenvolvedor
-                Desenvolvedor desenvolvedor = new Desenvolvedor(nomeDesenvolvedor, matriculaDesenvolvedor, salarioDesenvolvedor, linguagensDesenvolvedor, projetosDesenvolvedor);
+                Desenvolvedor desenvolvedor = new Desenvolvedor(nomeDesenvolvedor, matriculaDesenvolvedor, salarioDesenvolvedor, linguagensDesenvolvedor);//, projetosDesenvolvedor);
                 Cadastro.cadastrar(desenvolvedor);
                 break;
             case 3:

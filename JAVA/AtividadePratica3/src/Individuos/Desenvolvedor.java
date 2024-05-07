@@ -6,10 +6,10 @@ public class Desenvolvedor extends Funcionario{
 
     public Desenvolvedor() {}
 
-    public Desenvolvedor(String nome, String matricula, float salario, String linguagens, int projetos) {
+    public Desenvolvedor(String nome, String matricula, float salario, String linguagens){//, int projetos) {
         super(nome, matricula, salario);
         this.linguagens = linguagens;
-        this.projetos = projetos;
+        //this.projetos = projetos;
     }
 
 
@@ -42,12 +42,12 @@ public class Desenvolvedor extends Funcionario{
 
     @Override
     public String relatarProgresso() {
-        return "\nO Desenvolvedor " + getNome() + " esta desenvolvendo muitos projetos em " + linguagens + "\n----------";
+        return "\nO Desenvolvedor " + getNome() + " esta desenvolvendo muitos projetos em " + linguagens + "...\n----------";
     }
 
     @Override
     public float calcularSalario() {
-        projetos = 200;
-        return getSalario() * projetos;//cada projeto em desenvolvimento e 200 a mais no salario do dev...
+        //projetos = 2;
+        return getSalario(); //+ projetos;//cada projeto em desenvolvimento e 200 a mais no salario do dev...
     }
 }
