@@ -22,6 +22,7 @@ public class Sistema {
         System.out.println("[1] Cadastrar Funcionario");
         System.out.println("[2] Remover Funcionario");
         System.out.println("[3] Exibir Funcionario");
+        System.out.println("[4] Listar todos os Funcionarios");
         System.out.println("|0| Sair...");
         System.out.print("\nInforme uma opção: ");
     }
@@ -36,6 +37,9 @@ public class Sistema {
                 break;
             case 3: // Exibir Funcionario
                 exibirFuncionario();
+                break;
+            case 4: // Listar Funcionarios
+                listarFuncionarios();
                 break;
             case 0: // Sair
                 mensagemDeSaida();
@@ -159,6 +163,7 @@ public class Sistema {
                 System.out.println("Funcionário encontrado:");
                 System.out.println(funcionario.toString());
     
+                
                 //imprime os metodos da interface Trabalhavel...
                 if (funcionario instanceof Trabalhavel) {
                     Trabalhavel trabalhavel = (Trabalhavel) funcionario;
@@ -177,9 +182,39 @@ public class Sistema {
         
         System.out.println("Funcionário não encontrado.");
     }
+
+    /*--------------CASE 4------------- */
+     //Metodo que lista todas os Funcionarios cadastradas...
+        private static void listarFuncionarios() {
+        if (Cadastro.getListaFuncionarios().isEmpty()) {
+            System.out.println("\nNão há FUncionarios cadastrados.");
+        } else {
+            System.out.println("\nLista de Funcionarios:");
+            for (Funcionario funcionario : Cadastro.getListaFuncionarios()) {
+                System.out.println(funcionario.toString());
+
+                if (funcionario instanceof Trabalhavel) {
+                    Trabalhavel trabalhavel = (Trabalhavel) funcionario;
+
+                    System.out.println("\nTrabalhando: " + trabalhavel.trabalhar());
+                    System.out.println("Progresso: " + trabalhavel.relatarProgresso());
+                        
+                    //imprime o salario de cada funcionario respectivamente..
+                    float salario = funcionario.calcularSalario();
+                    System.out.println("Salário: " + salario);   
+                }
+            }
+            enterParaSeguir();
+    }
+    }
+    
+
+    /*--------------FIM CASES...------------- */
+
     
     
-    
+    /*--------------OUTROS METODOS------------- */
+
     public static void enterParaSeguir() {
         System.out.println("\nClique em qualquer tecla para continuar");
         scanner.nextLine();
@@ -230,13 +265,6 @@ private static void menu(){
 
 
 
-
-
-
-
-
-
-
     //Metodo que e chamado na main para executar o programa...
     public static void executar() {
         int op;
@@ -248,6 +276,3 @@ private static void menu(){
         } while (op != 0);
     }
 }
-
-
-
